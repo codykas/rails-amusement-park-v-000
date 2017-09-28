@@ -1,0 +1,16 @@
+<h1>Hello <%= @user.name %></h1>
+<% if @message %>
+  <p><%= @message %></p>
+<% end %>
+
+<p>Height: <%=@user.height  %></p>
+<p>Nausea: <%=@user.nausea  %></p>
+<p>Happiness: <%=@user.happiness  %></p>
+<p>Mood: <%=@user.mood  %></p>
+<p>Tickets: <%=@user.tickets%></p>
+<% if @user.admin == true %>
+  <p>ADMIN</p>
+<% end %>
+
+<%= link_to 'See attractions', attractions_path %>
+<%= link_to 'Log Out', signout_path %>
